@@ -1,6 +1,8 @@
 # Selenium Web Automation Project
 
 This project provides a structured framework for web automation testing using Selenium and Microsoft Edge.
+## Important: 
+Microsoft Edge is required to be version `145.0.3800.82`
 
 ## Prerequisites
 
