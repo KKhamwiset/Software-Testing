@@ -1,3 +1,4 @@
+from random import randint
 import os
 import time
 from selenium.webdriver.common.by import By
@@ -21,12 +22,13 @@ def run_fr1_test():
             register_link.click()
             print("Successfully navigated to Register page.")
 
-            
+            username = "frtest1" + "_" + str(randint(1,100000))
+            email = "frtest1" + "_" + str(randint(1,100000)) + "@gmail.com"
             fields = [
                 ("firstName", "John"),
                 ("lastName", "Doe"),
-                ("username","JD"),
-                ("email", "frtest1@gmail.com"),
+                ("username",username),
+                ("email", email),
                 ("password", "FRtest1_123"),
                 ("confirmPassword", "FRtest1_123")
             ]
