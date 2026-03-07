@@ -4,11 +4,11 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from automation.resources import get_driver
+from automation.resources import DriverManager
 
 def run_fr1_test():
     """Executes the FR-1 test case using the provided driver."""
-    driver = get_driver()
+    driver = DriverManager.get_driver()
     url = os.getenv("url", None)
     
     if url is not None:
@@ -61,7 +61,7 @@ def run_fr1_test():
             submit_button.click()
             print("Create account button clicked successfully.")
             
-            time.sleep(5)
+            time.sleep(8)
         except Exception as e:
             print(f"Test failed: {str(e)}")
     else:
