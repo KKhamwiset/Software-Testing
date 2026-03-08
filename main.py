@@ -16,8 +16,12 @@ def main():
         run_fr8_test,
         run_fr9_10_test,
         run_fr11_test,
-        run_fr12_test
+        run_fr12_test,
+        run_fr13_test,
+        run_fr14_test,
+        run_fr15_test
     ]
+
     selected_test = sys.argv[1::] if len(sys.argv) > 1 else None
     for test in test_list:
         try:

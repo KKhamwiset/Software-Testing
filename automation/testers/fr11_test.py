@@ -10,7 +10,7 @@ def run_fr11_test():
     driver = DriverManager.get_driver()
     url = os.getenv("url", None)
     
-    if url is not None and  "login" not in driver.current_url:
+    if  "login" not in driver.current_url:
         print(f"Navigating to {url}login")
         driver.get(url + "login")
             
@@ -39,5 +39,4 @@ def run_fr11_test():
             
         except Exception as e:
             print(f"Test failed: {str(e)}")
-    else:
-        print("URL is not provided in environment variables.")
+
