@@ -22,6 +22,7 @@ class DriverManager:
             service = Service(executable_path=driver_path)
             cls._driver = webdriver.Edge(service=service)
             cls._driver.maximize_window()
+            cls._driver.set_page_load_timeout(10)
 
         else:
             print("Reusing existing driver instance...")

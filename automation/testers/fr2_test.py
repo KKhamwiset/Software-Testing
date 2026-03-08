@@ -16,8 +16,8 @@ def run_fr2_test():
         
     try:
         wait = WebDriverWait(driver, 15)
-        user = os.getenv("admin_username","JD")
-        passwd = os.getenv("admin_password","FRtest1_123")
+        user = os.getenv("JD")
+        passwd = os.getenv("FRtest1_123")
         field =[
             ("user_email", user),
             ("password" , passwd),

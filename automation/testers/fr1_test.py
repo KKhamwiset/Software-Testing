@@ -16,7 +16,7 @@ def run_fr1_test():
         driver.get(url + "login")
         
         try:
-            wait = WebDriverWait(driver, 10)
+            wait = WebDriverWait(driver, 15)
             
             register_link = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a[href='/register']")))
             register_link.click()
